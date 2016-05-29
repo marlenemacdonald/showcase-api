@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+
+    	<style>
+	    	.main {
+	    		border: 1px solid rgba(0,0,0,0.1);
+	    		padding: 20px 50px;
+	    		margin-top: 30px;
+	    	}
+    	</style>
+
+    	<script>
+	    	$('document').ready(function(){
+	    		$('#flipAgain').slideUp();
+	    		populateProfile()
+	    	});
+			
+	    	function populateProfile(){
+	
+				console.log("populate");
+
+				if(!$.cookie('user')) {
+					window.location = "index.html";
+				}
+
+				var cookie = JSON.parse($.cookie('user'));
+
+				$('#info').html('Username: <b>' + cookie.username + '<b>')
+				$('#id').html('UserID: <b>' + cookie.id + '<b>');
+
+				$.ajax({
+					type: "GET",
+					url: "http://localhost:3000/profile/" + cookie.id,
+					headers: {
+						'x-access-token': cookie.token
+					}
+				}).done(function(data){
+
+					console.log('some message');
+					console.log(data.local.firstName);
+
+					
+
+
+					var html = "";
+
+						if(data.local.username){
+							html += "<p></br><b>First Name: </b>" + data.local.firstName + "</br>" + "<b>Last Name: </b>" + data.local.lastName + "</br>" + "<b>User Name: </b>" + data.local.username + "</br></p>";
+						}
+
+
+
+					$('#container').html(html);
+
+					
+					
+					
+				});
+			}
+
+    	</script>
+
+    	<script> 
+			$(document).ready(function(){
+    			$("#flip").click(function(){
+        			$("#container").slideUp();
+        			$(this).slideUp();
+        			$('#flipAgain').slideDown();
+        			displayProfile();
+    
+    			});
+			});
+
+			function displayProfile(){
+				var html = "";
+
+							html += "<p></br><b>First Name: </b><input name='firstName'>"  + "</br>" + "<b>Last Name: </b><input name='lastName'>" + "</br>" + "<b>User Name: </b><input name='username'>" + "</p>";
+
+
+
+					$('#container1').html(html);
+
+			}
+
+			
+		</script>
+		<script> 
+			$(document).ready(function(){
+    			$("#flipAgain").click(function(){
+        			updateProfile();
+    			});
+			});
+
+			function updateProfile(){
+
+					if(!$.cookie('user')) {
+					window.location = "index.html";
+				}
+
+				var cookie = JSON.parse($.cookie('user'));
+
+				$('#info').html('Username: <b>' + cookie.username + '<b>')
+				$('#id').html('UserID: <b>' + cookie.id + '<b>');
+
+					var obj = {
+		    			firstName: $('input[name="firstName"]').val(),
+		    			lastName: $('input[name="lastName"]').val(),
+		    			username: $('input[name="username"]').val()
+		    		}
+		    		console.log(obj);
+		    		$.ajax({
+		    			type: 'PUT',
+		    			url: "http://localhost:3000/profile/" + cookie.id,
+		    			data: obj,
+		    			headers: {
+						'x-access-token': cookie.token
+					}
+					
+		    		}).done(function(data){
+		    			console.log(data);
+		    			window.location = "profile.html";
+		    		}).fail(function(error){
+		    			console.log(error);
+		    		});
+	    		
+	    	}
+
+		</script>
+
+		<script>
+	    	$('document').ready(function(){
+	    		$('#logoutBtn').on('click', function(e){
+
+	    			e.preventDefault();
+
+	    			logout();
+	    		});
+
+	    		$('#taskListBtn').on('click', function(e){
+
+	    			e.preventDefault();
+	    			window.location = 'todos.html';
+	    			
+	    		});
+
+	    	});
+
+	    	function logout(){
+
+		    		$.ajax({
+		    			url: 'http://localhost:3000/logout',
+		    			type: 'GET'
+		    			
+		    		}).done(function(){
+		    			window.location = 'index.html';
+		    			
+		    		}).fail(function(error){
+		    			alert('Logout failed.');
+		    		});
+	    		}
+    	</script>
+
+	</head>
+
+	<body>
+		
+		<div class="container">
+
+			<div class="main col-sm-6 col-sm-offset-3">
+
+			    <h1><span class="fa fa-sign-in"></span> User Profile</h1>
+		
+			</div>
+
+			<br/>
+
+			<div id="container"></div>
+		</div>
+
+		<div class="container">
+		
+			</div>
+
+			<br/>
+
+			<div id="container1"></div>
+		</div>
+
+		<div id="flipAgain">Click to save profile</div>
+
+		<div id="flip">Click to edit profile</div>
+
+		<form>
+			    	<div class="">
+						<div class="input-group">
+							<span class="input-group-btn">
+
+								<button type="submit" id="logoutBtn" class="btn btn-warning btn-lg">Logout</button>
+
+								<button type="submit" id="taskListBtn" class="btn btn-warning btn-lg">Task List</button>
+							</span>
+						</div>
+					</div>
+
+			    </form>
+
+	</body>
+
+	
+</html>

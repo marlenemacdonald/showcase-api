@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+
+    	<style>
+	    	.main {
+	    		border: 1px solid rgba(0,0,0,0.1);
+	    		padding: 20px 50px;
+	    		margin-top: 30px;
+	    	}
+    	</style>
+
+    	<script>
+	    	$('document').ready(function(){
+
+	    		$('#signupBtn').on('click', function(e){
+
+	    			e.preventDefault();
+
+	    			signup();
+	    			
+	    		});
+	    	});
+
+		
+
+	    	function signup(){
+
+
+	    		if($('input[name="firstName"]').val() && $('input[name="lastName"]').val() && $('input[name="username"]').val() && $('input[name="password"]').val()) {
+
+	    			var obj = {
+		    			firstName: $('input[name="firstName"]').val(),
+		    			lastName: $('input[name="lastName"]').val(),
+		    			username: $('input[name="username"]').val(),
+		    			password: $('input[name="password"]').val()
+		    		}
+		    		
+		    		//check if user exists
+		    		/*$.ajax({
+		    			url: 'http://localhost:3000/signup',
+		    			type: 'GET'
+		    			data: obj
+		    			
+		    		}).done(function(){
+		    			console.log('exists');
+		    			
+		    		}).fail(function(error){
+		    			alert('does not exist');
+		    		});*/
+
+		    		//create user
+		    		$.ajax({
+		    			url: 'http://localhost:3000/signup',
+		    			type: 'POST',
+		    			data: obj
+		    		}).done(function(){
+		    			window.location = "index.html";
+		    		}).fail(function(error){
+		    			console.log(error);
+		    		});
+	    		}
+	    		
+	    	}
+
+	    	
+    	</script>
+
+	</head>
+
+	<body>
+		
+		<div class="container">
+
+			<div class="main col-sm-6 col-sm-offset-3">
+
+			    <h1><span class="fa fa-sign-in"></span> Signup</h1>
+
+
+
+			    <!-- LOGIN FORM -->
+			   
+			    <form>
+			        <div class="form-group">
+			            <label>First Name</label>
+			            <input type="text" class="form-control" name="firstName">
+			        </div>
+			        <div class="form-group">
+			            <label>Last Name</label>
+			            <input type="text" class="form-control" name="lastName">
+			        </div>
+			        <div class="form-group">
+			            <label>Username</label>
+			            <input type="text" class="form-control" name="username">
+			        </div>
+			        <div class="form-group">
+			            <label>Password</label>
+			            <input type="password" class="form-control" name="password">
+			        </div>
+
+			        <button type="submit" class="btn btn-warning btn-lg" id="signupBtn">Signup!</button>
+			    </form>
+
+			    <hr>
+
+				<p>Already have an account? <a href="index.html">Login</a></p>			
+			</div>
+		</div>
+	</body>
+</html>

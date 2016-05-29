@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+		<script src="js/scripts.js" type="application/javascript"></script>
+
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+
+    	<style>
+	    	.main {
+	    		border: 1px solid rgba(0,0,0,0.1);
+	    		padding: 20px 50px;
+	    		margin-top: 30px;
+	    	}
+    	</style>
+
+    	<script>
+	    	$('document').ready(function(){
+	    		$('#logoutBtn').on('click', function(e){
+
+	    			e.preventDefault();
+
+	    			logout();
+	    		});
+
+	    		$('#editProfileBtn').on('click', function(e){
+
+	    			e.preventDefault();
+	    			window.location = 'profile.html';
+	    			
+	    		});
+
+	    	});
+
+	    	function logout(){
+
+		    		$.ajax({
+		    			url: 'http://localhost:3000/logout',
+		    			type: 'GET'
+		    			
+		    		}).done(function(){
+		    			window.location = 'index.html';
+		    			
+		    		}).fail(function(error){
+		    			alert('Logout failed.');
+		    		});
+	    		}
+    	</script>
+
+	</head>
+
+	<body>
+		
+		<div class="container">
+
+			<div class="main col-sm-6 col-sm-offset-3">
+
+			    <h1>Task List</h1>
+
+			    <!-- LOGIN FORM -->
+			    <form>
+			    	<div class="">
+						<div class="input-group">
+							<input type="text" id="nameBox" class="form-control" placeholder="Write a task">
+							<span class="input-group-btn">
+								<button class="btn btn-secondary" id="submitBtn" type="button">Submit</button>
+							</span>
+						</div>
+					</div>
+				
+			    </form>
+			    
+			    <hr>
+
+			    <div id="container"></div>
+			</div>
+		</div>
+
+		<form>
+			    	<div class="">
+						<div class="input-group">
+							<span class="input-group-btn">
+
+								<button type="submit" id="logoutBtn" class="btn btn-warning btn-lg">Logout</button>
+
+								<button type="submit" id="editProfileBtn" class="btn btn-warning btn-lg">Edit Profile</button>
+							</span>
+						</div>
+					</div>
+			    </form>
+	</body>
+</html>

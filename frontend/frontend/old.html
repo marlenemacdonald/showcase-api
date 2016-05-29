@@ -1,0 +1,37 @@
+$('form#formImage').submit(function(e){
+
+	    			e.preventDefault();
+
+	    			fileUpload();
+	    		});
+
+
+function fileUpload() {
+
+			//var formData = new FormData($('#formImage'));
+
+    				$.ajax( {
+      				url: 'http://localhost:3000/fileUpload',
+     				type: 'POST',
+      				//data: formData,
+      				//processData: false
+      				}).done(function(){
+		    			console.log("image uploaded");
+		    			
+		    		}).fail(function(error){
+		    			console.log(error);
+		    			
+		    		});
+   				 
+   					 //e.preventDefault();
+ 				 
+
+	    	}
+
+<!-- <form id="formImage" action"/" method='post' enctype="multipart/form-data">
+			    	<div class= "form-group">
+			    	<input type="file" name="postImg">
+			        <input type="submit" value="Submit">
+			        </div>
+			    </form> -->
+
