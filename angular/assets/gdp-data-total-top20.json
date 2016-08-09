@@ -1,0 +1,161 @@
+[{
+    "Country Name": "United States",
+    "Country Code": "USA",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 14964372000000,
+    "2011 [YR2011]": 15517926000000,
+    "2012 [YR2012]": 16163158000000,
+    "2013 [YR2013]": 16768053000000,
+    "2014 [YR2014]": 17419000000000
+}, {
+    "Country Name": "China",
+    "Country Code": "CHN",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 40890300000000,
+    "2011 [YR2011]": 48412350000000,
+    "2012 [YR2012]": 53412303890000,
+    "2013 [YR2013]": 58801875590000,
+    "2014 [YR2014]": 63613873246030
+}, {
+    "Country Name": "India",
+    "Country Code": "IND",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 77841145037912,
+    "2011 [YR2011]": 88320115262326.3,
+    "2012 [YR2012]": 99885397435329.3,
+    "2013 [YR2013]": 113450557060597,
+    "2014 [YR2014]": 125412081273533
+}, {
+    "Country Name": "Germany",
+    "Country Code": "DEU",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 2580060000000,
+    "2011 [YR2011]": 2703120000000,
+    "2012 [YR2012]": 2754860000000,
+    "2013 [YR2013]": 2820820000000,
+    "2014 [YR2014]": 2915650000000
+}, {
+    "Country Name": "Russian Federation",
+    "Country Code": "RUS",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 46308541189900,
+    "2011 [YR2011]": 55967226762400,
+    "2012 [YR2012]": 62176494979200,
+    "2013 [YR2013]": 66190119918000,
+    "2014 [YR2014]": 71406399199400
+}, {
+    "Country Name": "Brazil",
+    "Country Code": "BRA",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 3885848000000,
+    "2011 [YR2011]": 4373658000000,
+    "2012 [YR2012]": 4805912000000,
+    "2013 [YR2013]": 5316455000000,
+    "2014 [YR2014]": 5687310000000
+}, {
+    "Country Name": "United Kingdom",
+    "Country Code": "GBR",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1555548000000,
+    "2011 [YR2011]": 1619480000000,
+    "2012 [YR2012]": 1665213000000,
+    "2013 [YR2013]": 1734949000000,
+    "2014 [YR2014]": 1816439000000
+}, {
+    "Country Name": "France",
+    "Country Code": "FRA",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1998481000000,
+    "2011 [YR2011]": 2059284000000,
+    "2012 [YR2012]": 2086929000000,
+    "2013 [YR2013]": 2116565000000,
+    "2014 [YR2014]": 2132449000000
+}, {
+    "Country Name": "Mexico",
+    "Country Code": "MEX",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 13266857877000,
+    "2011 [YR2011]": 14527336928000,
+    "2012 [YR2012]": 15599270701000,
+    "2013 [YR2013]": 16077058936000,
+    "2014 [YR2014]": 17209663279000
+}, {
+    "Country Name": "Italy",
+    "Country Code": "ITA",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1605694419600,
+    "2011 [YR2011]": 1638857339300,
+    "2012 [YR2012]": 1614672464900,
+    "2013 [YR2013]": 1606894713800,
+    "2014 [YR2014]": 1613859103200
+}, {
+    "Country Name": "Saudi Arabia",
+    "Country Code": "SAU",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1975543000000,
+    "2011 [YR2011]": 2510650000000,
+    "2012 [YR2012]": 2752334000000,
+    "2013 [YR2013]": 2791259000000,
+    "2014 [YR2014]": 2826869000000
+}, {
+    "Country Name": "Canada",
+    "Country Code": "CAN",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1662757000000,
+    "2011 [YR2011]": 1770014000000,
+    "2012 [YR2012]": 1831228000000,
+    "2013 [YR2013]": 1893759000000,
+    "2014 [YR2014]": 1974825000000
+}, {
+    "Country Name": "Spain",
+    "Country Code": "ESP",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1080913000000,
+    "2011 [YR2011]": 1070413000000,
+    "2012 [YR2012]": 1042872000000,
+    "2013 [YR2013]": 1031272000000,
+    "2014 [YR2014]": 1041160000000
+}, {
+    "Country Name": "Turkey",
+    "Country Code": "TUR",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1098799348400,
+    "2011 [YR2011]": 1297713210100,
+    "2012 [YR2012]": 1416798489800,
+    "2013 [YR2013]": 1567289237900,
+    "2014 [YR2014]": 1747362376500
+}, {
+    "Country Name": "Australia",
+    "Country Code": "AUS",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 1296797000000,
+    "2011 [YR2011]": 1409795000000,
+    "2012 [YR2012]": 1491046000000,
+    "2013 [YR2013]": 1524383000000,
+    "2014 [YR2014]": 1584578000000
+}, {
+    "Country Name": "Thailand",
+    "Country Code": "THA",
+    "Series Name": "GDP (current LCU)",
+    "Series Code": "NY.GDP.MKTP.CN",
+    "2010 [YR2010]": 10802402000000,
+    "2011 [YR2011]": 11300485000000,
+    "2012 [YR2012]": 12354656000000,
+    "2013 [YR2013]": 12910038000000,
+    "2014 [YR2014]": 13148601000000
+}]

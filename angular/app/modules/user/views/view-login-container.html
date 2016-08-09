@@ -1,0 +1,46 @@
+
+
+<div class="main col-sm-6 col-sm-offset-3">
+<form name="loginForm">
+
+	<div layout="column" layout-padding ng-cloak>
+
+		<div class="logo">
+			<img src="img/whitehouse.svg" />
+		</div>
+
+		<h3>Login to My First Apps</h3>
+		
+		<md-content class="md=no=momentum">
+			<md-input-container class="md-icon-float md-block">
+				<label>Name</label>
+
+				<md-icon md-svg-src="img/man-user.svg" class="name"> </md-icon>
+
+				<input required ng-model="username" name="username" type="text">
+				<div ng-messages="loginForm.username.$error">
+				<div ng-message="required">Username is required.</div>
+				</div>
+			</md-input-container>
+
+			<md-input-container class="md-icon-float md-block">
+				<label>Password</label>
+
+				<md-icon md-svg-src="img/locked-padlock.svg"> </md-icon>
+
+				<input required ng-model="password" name="password" type="password">
+				<div ng-messages="loginForm.password.$error">
+				<div ng-message="required">Password is required.</div>
+				</div>
+			</md-input-container>
+
+			<md-button class="md-raised md-primary login-button" ng-click="loginHandler()" ng-disabled="loginForm.$pristine || loginForm.$invalid">Login</md-button>
+
+		</md-content>
+	</div>
+
+</form>
+
+<hr />
+<p>Need an account? <a ui-sref="signup">Signup</a></p>
+</div>

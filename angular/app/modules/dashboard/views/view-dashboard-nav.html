@@ -1,0 +1,43 @@
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+                {{name}} 
+            </a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.basic.start" ui-sref-active="active">Start</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.basic.count" ui-sref-active="active">Counter</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.full.ball" ui-sref-active="active">8-Ball</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.basic.phrases" ui-sref-active="active">Edit 8-Ball Phrases</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.quad.summary" ui-sref-active="active">Data Summary</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.column.toptwenty" ui-sref-active="active">Top Twenty</a>
+        </li>
+        <li>
+            <a href="#">Showcase</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.basic.profile" ui-sref-active="active">Profile</a>
+        </li>
+        <li>
+            <a href="#">Logout</a>
+        </li>
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->
+
+<button type="button" class="navbar-toggle" ng-click="toggleNav()">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</button>

@@ -1,0 +1,24 @@
+
+<div class="main col-sm-6 col-sm-offset-3">
+<form name="phrasesForm" ng-submit="update()">
+
+	<div layout="column" layout-padding ng-cloak>
+	
+			<form>
+			<md-content class="md=no=momentum">
+			<md-input-container ng-controller="PhraseController" class= "md-block" ng-repeat="phrase in content track by $index">
+				<input ng-model="content[$index]" type="text" aria-label="content" ng-model-options="{ updateOn: 'submit' }">
+				
+			</md-input-container>
+			<input type="submit" id="submit" value="Submit"/>
+
+			</md-content>
+	
+			</form>
+		
+	</div>
+
+</form>
+
+</div>
+

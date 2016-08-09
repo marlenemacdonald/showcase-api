@@ -1,0 +1,151 @@
+body {
+	font-family: "Advent Pro";
+}
+.navbar-toggle {
+	display: block !important;
+    position: absolute;
+    top: -7px;
+    left: 310px;
+    z-index: 1000;
+    zoom: 0.7;
+    transition: all 0.2s;
+}
+.icon-bar {
+	background: #fff;
+    transition: all 0.2s;
+}
+.navbar-toggle.collapsed {
+    transition: all 0.2s;
+	left: 0px;
+}
+.navbar-toggle.collapsed .icon-bar {
+	background: #000;
+    transition: all 0.2s;
+}
+.sidebar-nav a.active {
+    background: orange;
+    color: #000;
+}
+div[ui-view="main"]{
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 20px;
+    
+}
+
+[ui-view='main'].ng-enter, [ui-view='main'].ng-leave {
+
+}
+
+.login-button{
+  float: right;
+}
+
+.signup-button{
+  float: right;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+
+[ui-view='main'].ng-enter {
+  opacity: 0;
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+
+[ui-view='main'].ng-enter-active {
+  opacity: 1;
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+
+[ui-view='main'].ng-leave {
+  opacity: 1;
+}
+
+[ui-view='main'].ng-leave-active {
+  opacity: 0;
+}
+
+
+
+[ui-view='header'].ng-enter, [ui-view='header'].ng-leave {
+
+}
+
+[ui-view='header'].ng-enter {
+  opacity: 0;
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+
+[ui-view='header'].ng-enter-active {
+  opacity: 1;
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+
+[ui-view='header'].ng-leave {
+  opacity: 1;
+}
+
+[ui-view='header'].ng-leave-active {
+  opacity: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+ 
+ 
+.pic {
+  float: left;
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -100px;
+  margin-top: -100px;
+
+}
+
+
+/*MORPH*/
+.morph {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.morph:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+* :focus { 
+  outline: 0; 
+}
+

@@ -29,8 +29,9 @@ router.post('/', function(req, res, next){
 			'message': 'User successfully logged in.',
 			'token': token,
 			'id': user._id,
-			'firstName': user.local.firstName,
-			'lastName': user.local.lastName
+			'username': (user.local ? user.local.username : "no user name"),
+			'firstName': (user.local ? user.local.firstName : "no first name"),
+			'lastName': (user.local ? user.local.lastName : "no last name")
 		});
 	})(req, res, next);
 });

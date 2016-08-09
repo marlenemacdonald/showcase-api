@@ -1,0 +1,28 @@
+<div ng-app="FirstApp" ng-controller="TableCtrl"> 
+
+<table class="table table-hover">
+    <thead>
+            <tr>
+                <th>Country Name</th>
+                <th>2010</th>
+                <th>2011</th>
+                <th>2012</th>
+                <th>2013</th>
+                <th>2014</th>
+            </tr>
+        </thead>
+
+    <tr ng-repeat="x in gdpData" ng-click="setSelected(x);">
+      
+    <td>{{ x["Country Name"] }}</td>
+          <td>{{ x["2010 [YR2010]"] | shortNumber}}</td>
+          <td>{{ x["2011 [YR2011]"] | shortNumber}}</td>
+          <td>{{ x["2012 [YR2012]"] | shortNumber}}</td>
+          <td>{{ x["2013 [YR2013]"] | shortNumber}}</td>
+          <td>{{ x["2014 [YR2014]"] | shortNumber}}</td>
+    </tr>
+</table>
+
+</div>
+
+

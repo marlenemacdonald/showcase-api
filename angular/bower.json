@@ -1,0 +1,27 @@
+{
+  "name": "first-app",
+  "description": "my first angular app",
+  "main": "index.js",
+  "authors": [
+    "marlene"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "blah",
+    "blah"
+  ],
+  "homepage": "https://github.com/marlenemacdonald/showcase-api",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.1",
+    "angular-aria": "^1.5.6",
+    "angular-material": "^1.0.9",
+    "angular-animate": "^1.5.6",
+    "angular-local-storage": "^0.2.7",
+    "jquery": "^3.0.0",
+    "bootstrap": "^3.3.6",
+    "angular-loading-bar": "^0.9.0",
+    "highcharts": "^4.2.5",
+    "highcharts-ng": "^0.0.11"
+  }
+}

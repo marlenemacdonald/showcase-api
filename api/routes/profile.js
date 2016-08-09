@@ -38,8 +38,7 @@ router.put('/:id', Token.verify, function(req, res, next){
 		console.log(req.body);
 	
 		UserModel.findByIdAndUpdate(req.params.id, { $set: { 'local.firstName': req.body.firstName,
-															 'local.lastName': req.body.lastName,	
-															 'local.username': req.body.username }}, { 'new': true}, function(err, post){
+															 'local.lastName': req.body.lastName}}, { 'new': true}, function(err, post){
 
 			if (err){
 				return res.status(500).json(err);

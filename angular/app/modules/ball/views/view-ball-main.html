@@ -1,0 +1,31 @@
+<div class="ball-main">
+	
+	<div class="ball-content">
+		<div class="ball"></div>
+	</div>
+	<style>
+body {
+    background-color: black;
+    color: white;
+}
+</style>
+<body>
+
+<h1>MAGIC 8 BALL - ask a question and click on the ball!</h1>
+
+</body>
+
+<div id="ball" ng-controller="BallController" class="morph pic">
+	<img src="img/eightball.gif" border="0" alt="Eightball" ng-click="getContent($event)">
+    <center><b>{{content[x]}}</b></center><br/>
+
+</div>
+
+<md-input-container ng-controller="BallController" class= "md-block" input ng-model="content[x]" type="text" aria-label="content">
+</md-input-container>
+
+</div>
+
+
+<p align="right">Manage 8-ball Phrases <a ui-sref='dashboard.basic.phrases'>Manage Phrases</a></p>
+

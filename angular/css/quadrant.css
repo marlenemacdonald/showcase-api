@@ -1,0 +1,52 @@
+html, body, [ui-view="container"], #wrapper, [ui-view="layout"], [ui-view="main"] {
+  height: 100%;
+}
+[ui-view="layout"]{
+  overflow: scroll; 
+}
+
+.container-fluid {
+  overflow: hidden;
+}
+
+.equal {
+  height: 50%;
+}
+
+.equal, .equal > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 0 auto;
+}
+
+.quadrant {
+  height: 100%;
+  padding: 0px;
+}
+
+.quad-wrapper, .quad-wrapper .container-fluid {
+  height: 100%;
+}
+
+.quad-view {
+  width: 100%;
+}
+
+
+
+.summary-nav {
+  text-align: right;
+  background: #3a3a3a;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.05);
+}
+
+.summary-button {
+    padding: 0 12px;
+    font-size: 12px;
+    margin: 6px 8px;
+    line-height: 25px;
+    min-height: auto;
+}

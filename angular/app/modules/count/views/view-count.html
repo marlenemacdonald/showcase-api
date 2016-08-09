@@ -1,0 +1,13 @@
+<div ng-controller="FirstCountController">
+  First count: {{value}} <br/>
+
+  <button ng-click="changeValue($event)">Change Value</button>
+</div>
+
+<div ng-controller="SecondCountController">
+  Second count: {{value}} <br/>
+
+  <button ng-click="changeValue($event)">Change Value</button>
+</div>
+
+<custom-button></custom-button>
